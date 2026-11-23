@@ -1,0 +1,495 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5A321F;
+    padding: 30px;
+    height: 80px;
+    
+
+    ul{
+        display: flex;
+        list-style-type: none;
+        gap: 20px;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+   
+}
+
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+html {
+    scroll-behavior: smooth;
+}
+ 
+body {
+    background: var(--fundo);
+    color: var(--marrom);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+}
+ 
+/* =========================
+   CABEÇALHO
+========================= */
+ 
+.cabecalho-site {
+    width: 100%;
+    min-height: 95px;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ 
+    background: #f1e4d5;
+    border-bottom: 1px solid var(--borda);
+}
+ 
+.cabecalho-site img {
+    width: 80px;
+    object-fit: contain;
+}
+ 
+.cabecalho-site nav ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+ 
+.cabecalho-site nav a {
+    color: var(--marrom);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+    position: relative;
+}
+ 
+.cabecalho-site nav a:hover {
+    color: var(--dourado);
+}
+ 
+.cabecalho-site nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--dourado);
+    transition: .3s;
+}
+ 
+.cabecalho-site nav a:hover::after {
+    width: 100%;
+}
+ 
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+ 
+.principal {
+    min-height: 850px;
+    padding: 65px 5%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+ 
+.container {
+    width: 100%;
+    max-width: 1250px;
+    min-height: 550px;
+ 
+    padding: 40px;
+    position: relative;
+ 
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+ 
+    background: linear-gradient(
+        145deg,
+        #fbf4eb,
+        #f0e1d0
+    );
+ 
+    box-shadow: 0 8px 25px #4b2e1b0d;
+}
+ 
+.container > img {
+    width: 100px;
+    object-fit: contain;
+}
+ 
+/* =========================
+   TÍTULO
+========================= */
+ 
+.titulo {
+    text-align: center;
+    margin: -95px auto 65px;
+    max-width: 650px;
+}
+ 
+.titulo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--marrom);
+    margin-bottom: 18px;
+}
+ 
+.titulo p {
+    color: var(--marrom-claro);
+    font-size: 18px;
+    line-height: 1.7;
+}
+ 
+/* =========================
+   PAINEL DE FEEDBACK
+========================= */
+ 
+.painel-feedback {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    width: 310px;
+    z-index: 10;
+}
+ 
+/* RESUMO */
+ 
+.painel-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+ 
+    padding: 12px;
+ 
+    background: #f2e4d3;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+ 
+    box-shadow: 0 4px 12px #4b2e1b10;
+}
+ 
+.media {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+ 
+.media h2 {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--marrom);
+}
+ 
+.media p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+ 
+.media strong {
+    font-size: 17px;
+    color: var(--marrom);
+}
+ 
+#EstrelasMedia {
+    color: var(--dourado);
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+ 
+.quantidade {
+    padding: 9px 11px;
+    border-radius: 8px;
+    background: #e6cfb5;
+    color: var(--marrom);
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+ 
+/* BOTÃO */
+ 
+.botao-feedback {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+ 
+    background: var(--marrom);
+    color: var(--branco);
+ 
+    border: 1px solid var(--marrom);
+    border-radius: 9px;
+ 
+    font-size: 14px;
+    font-weight: 600;
+ 
+    cursor: pointer;
+    transition: .3s;
+}
+ 
+.botao-feedback:hover {
+    background: #69472e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px #4b2e1b25;
+}
+ 
+/* =========================
+   LISTA DE AVALIAÇÕES
+========================= */
+ 
+.lista-feedbacks {
+    margin-top: 12px;
+    padding: 20px;
+ 
+    background: #fbf3e9;
+ 
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+ 
+    box-shadow: 0 12px 30px #4b2e1b25;
+ 
+    max-height: 380px;
+    overflow-y: auto;
+ 
+    animation: aparecer .3s ease;
+}
+ 
+.escondido {
+    display: none;
+}
+ 
+/* CABEÇALHO DA LISTA */
+ 
+.cabecalho-feedback {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ 
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+ 
+    border-bottom: 1px solid var(--borda);
+}
+ 
+.cabecalho-feedback h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    color: var(--marrom);
+}
+ 
+.cabecalho-feedback button {
+    width: 30px;
+    height: 30px;
+ 
+    border: none;
+    border-radius: 50%;
+ 
+    background: #ead9c6;
+    color: var(--marrom);
+ 
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+ 
+.cabecalho-feedback button:hover {
+    background: var(--marrom);
+    color: white;
+}
+ 
+/* COMENTÁRIOS */
+ 
+#ConteudoFeedbacks {
+    list-style: none;
+    padding: 0;
+}
+ 
+#ConteudoFeedbacks li {
+    border-bottom: 1px solid #e4d2bd;
+}
+ 
+#ConteudoFeedbacks article {
+    padding: 15px 0;
+}
+ 
+#ConteudoFeedbacks h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--marrom);
+}
+ 
+#ConteudoFeedbacks .estrelas {
+    margin: 7px 0;
+    color: var(--dourado);
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+ 
+#ConteudoFeedbacks article p:last-child {
+    color: var(--marrom-claro);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+ 
+.lista-feedbacks::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+.lista-feedbacks::-webkit-scrollbar-thumb {
+    background: #c8ad8e;
+    border-radius: 10px;
+}
+ 
+
+ 
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+ 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+
+ 
+footer {
+    min-height: 65px;
+    background: #ead9c6;
+    border-top: 1px solid var(--borda);
+}
+
+ 
+@media (max-width: 900px) {
+ 
+    .cabecalho-site {
+        flex-direction: column;
+        gap: 20px;
+    }
+ 
+    .cabecalho-site nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+ 
+    .titulo {
+        margin: 30px auto 50px;
+    }
+ 
+    .painel-feedback {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+ 
+    .container {
+        padding: 25px;
+    }
+ 
+    .container > img {
+        display: block;
+        margin: 0 auto;
+    }
+ 
+    .principal {
+        padding: 30px 4%;
+    }
+ 
+}
+ 
+@media (max-width: 500px) {
+ 
+    .titulo h1 {
+        font-size: 34px;
+    }
+ 
+    .titulo p {
+        font-size: 15px;
+    }
+ 
+    .cabecalho-site nav ul {
+        gap: 13px;
+    }
+ 
+    .cabecalho-site nav a {
+        font-size: 13px;
+    }
+ 
+}
+ 
+.avaliacao {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 8px;
+  padding-top: 35px; /* Espaço para o topo do arco não cortar */
+}
+
+.avaliacao input[type="radio"] {
+  display: none;
+}
+
+.avaliacao label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+  display: inline-block;
+}
+
+/* Estrela 1 (esquerda - mais baixa e inclinada para a esquerda) */
+.avaliacao label[for="estrela1"] {
+  transform: translateY(18px) rotate(-25deg);
+}
+
+/* Estrela 2 (meio-esquerda) */
+.avaliacao label[for="estrela2"] {
+  transform: translateY(5px) rotate(-12deg);
+}
+
+/* Estrela 3 (centro - topo do arco) */
+.avaliacao label[for="estrela3"] {
+  transform: translateY(0px) rotate(0deg);
+}
+
+/* Estrela 4 (meio-direita) */
+.avaliacao label[for="estrela4"] {
+  transform: translateY(5px) rotate(12deg);
+}
+
+/* Estrela 5 (direita - mais baixa e inclinada para a direita) */
+.avaliacao label[for="estrela5"] {
+  transform: translateY(18px) rotate(25deg);
+}
+
+/* Mantém a cor ao passar o mouse ou selecionar */
+.avaliacao label:hover,
+.avaliacao label:hover ~ label,
+.avaliacao input[type="radio"]:checked ~ label {
+  color: #f5b301;
+}
+ 

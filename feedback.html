@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="imagem/1.png" width="80px" alt="">
+
+        <nav>
+            <ul>
+                <li><a href="">Início</a></li>
+                <li><a href="">Reserva</a></li>
+                <li><a href="">Cardápio</a></li>
+                <li><a href="">Sobre</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="">Contato</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="principal" id="feedback">
+        <div class="container">
+            <img src="imagem/1.png" width="100px" alt="">
+            <div class="titulo">
+               
+               <h1>Feedback dos Clientes</h1>
+               <p>Sua opinião é muito importante para nós. Compartilhe sua experiência no Boteco Dona Dica. </p>
+
+            </div>
+            <aside class="painel-feedback">
+
+                <header class="painel-topo">
+
+                    <section class="media">
+                        <h2>Avaliação média</h2>
+
+                        <p>
+                            <strong id="Media">0.0</strong>
+                            <span id="EstrelasMedia">☆☆☆☆☆</span>
+                        </p>
+                    </section>
+
+                    <p class="quantidade" id="Quantidade">
+
+                        0 avaliações
+                    </p>
+
+                </header>
+
+                <button type="button" id="AlternarFeedback" class="botao-feedback" aria-expanded="false"
+                    aria-controls="ListaFeedbacks">
+
+                    Ver opiniões
+
+                </button>
+
+                <section id="ListaFeedbacks" class="lista-feedbacks escondido" aria-label="Avaliações dos clientes"
+                    aria-hidden="true">
+
+                    <header class="cabecalho-feedback">
+
+                        <h2>Opiniões dos clientes</h2>
+
+                        <button type="button" id="FecharFeedback" aria-label="Fechar avaliações">
+
+                            &times;
+
+                        </button>
+
+                    </header>
+
+                    <ol id="ConteudoFeedbacks">
+                        <li>Carregando avaliações...</li>
+                    </ol>
+
+                </section>
+
+            </aside>
+
+            <h2>Conte-nos sobre sua experiência </h2>
+            <h3>Como você avalia sua visita?</h3>
+
+            <div class="avaliacao">
+  <input type="radio" id="estrela5" name="nota" value="5">
+  <label for="estrela5" title="5 estrelas">&#9733;</label>
+
+  <input type="radio" id="estrela4" name="nota" value="4">
+  <label for="estrela4" title="4 estrelas">&#9733;</label>
+
+  <input type="radio" id="estrela3" name="nota" value="3">
+  <label for="estrela3" title="3 estrelas">&#9733;</label>
+
+  <input type="radio" id="estrela2" name="nota" value="2">
+  <label for="estrela2" title="2 estrelas">&#9733;</label>
+
+  <input type="radio" id="estrela1" name="nota" value="1">
+  <label for="estrela1" title="1 estrela">&#9733;</label>
+</div>
+
+
+
+        </div>
+
+    </section>
+
+    <footer></footer>
+</body>
+
+</html>
